@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=travel"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">
+          <span class="material-symbols-outlined"> travel </span>
+          <h2>Explore</h2>
+        </div>
+
+        <ul class="active">
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Experiences</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="cta-btn plan-ur-trip">Plan Your Trip</button>
+
+        <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="hero container">
+        <h1>Explore.Dream.</h1>
+        <h2>Discover.</h2>
+        <div class="hero-text">
+          <p>
+            Find amazing places, unforgettable experiences, and create memories
+            that last a lifetime.
+          </p>
+        </div>
+        <button class="cta-btn">
+          Explore Destinations
+          <span class="arrow">&#8594;</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="destinations container">
+      <h2>Popular Destinations</h2>
+      <div class="card-wrapper">
+        <div class="card">
+          <img src="images/Bali.jpg" />
+          <div class="card-content">
+            <h3>Bali, Indonesia</h3>
+            <p>
+              Tropical beaches, culture <br />
+              and adventure.
+            </p>
+
+            <a href="#">Explore<span class="arrow">&#8594;</span></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Swiss Alps.jpeg" />
+          <div class="card-content">
+            <h3>Swiss Alps, Switzerland</h3>
+            <p>
+              Breathtaking views and <br />
+              serene landscapes.
+            </p>
+
+            <a href="#">Explore<span class="arrow">&#8594;</span></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/Satorini.jpg" />
+          <div class="card-content">
+            <h3>Satorini, Greece</h3>
+            <p>
+              Stunning sunsets and iconic <br />
+              white architecture.
+            </p>
+
+            <a href="#">Explore<span class="arrow">&#8594;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-container container">
+        <div class="feature">
+          <img src="images/compass-light.svg" alt="" />
+          <h4>Handpicked Places</h4>
+          <p>Curated destinations just for you</p>
+        </div>
+
+        <div class="feature">
+          <img src="images/tagoutline.svg" alt="" />
+          <h4>Best Price Guarantee</h4>
+          <p>Get the best deals on your trip</p>
+        </div>
+
+        <div class="feature">
+          <img src="images/headset.png" alt="" />
+          <h4>24/7 Support</h4>
+          <p>We're here anytime you need us</p>
+        </div>
+
+        <div class="feature">
+          <img src="images/shield-check.png" alt="" />
+          <h4>Safe & Sound</h4>
+          <p>Your safety is our top priority</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      let menuBtn = document.querySelector(".menu");
+      let menuSpans = menuBtn.querySelector("span");
+      menuBtn.addEventListener("click", () => {
+        document.querySelector("ul").classList.toggle("active");
+      });
+
+      let navBar = document.querySelector("nav");
+      let ul = document.querySelector("ul");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navBar.classList.add("scrolled");
+          navBar.style.position = "fixed";
+        } else {
+          navBar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
